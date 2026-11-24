@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can AI Replace Programmers?</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #15151d;
+    color: #eeeeee;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    height: 100vh;
+    padding: 9vh 11vw 12vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide.active {
+    display: flex;
+}
+
+h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.1;
+    margin-bottom: 28px;
+    max-width: 900px;
+}
+
+h2 {
+    font-size: clamp(30px, 4vw, 46px);
+    margin-bottom: 38px;
+}
+
+h3 {
+    color: #b9a3f5;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #bdbdc8;
+    max-width: 850px;
+}
+
+.accent {
+    color: #ad91f5;
+}
+
+.author {
+    margin-top: 55px;
+    color: #9999a5;
+    font-size: 16px;
+}
+
+.author strong {
+    color: #eeeeee;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    max-width: 1000px;
+}
+
+.item {
+    border-left: 2px solid #8f70d8;
+    padding-left: 18px;
+    margin-bottom: 30px;
+}
+
+.item p {
+    font-size: 16px;
+}
+
+.number {
+    color: #777783;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.quote {
+    border-left: 3px solid #ad91f5;
+    padding: 20px 25px;
+    margin-top: 30px;
+    background: #20202b;
+    max-width: 850px;
+}
+
+.quote p {
+    color: #e2e2eb;
+    font-size: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #15151d;
+}
+
+.footer button {
+    border: 1px solid #41404e;
+    background: #22212c;
+    color: white;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.footer button:hover {
+    background: #343141;
+}
+
+.footer button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.progress {
+    flex: 1;
+    height: 3px;
+    background: #353440;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: #ad91f5;
+    transition: width .3s;
+}
+
+.counter {
+    color: #9999a5;
+    font-size: 13px;
+}
+
+@media(max-width: 650px) {
+    .slide {
+        padding: 8vh 7vw 13vh;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    h1 { font-size: 43px; }
+    h2 { font-size: 32px; margin-bottom: 25px; }
+    p { font-size: 16px; }
+    .item { margin-bottom: 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<section class="slide active">
+    <h1>Can AI Replace <span class="accent">Programmers?</span></h1>
+    <p>
+        Is artificial intelligence going to take over programming,
+        or will human developers always be needed?
+    </p>
+
+    <div class="author">
+        <strong>Błażej Pacelt</strong> &nbsp;|&nbsp;
+        <strong>Adrian Miałkowski</strong>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>AI in programming today</h2>
+
+    <p>
+        AI is already used by many programmers. Tools like ChatGPT and
+        GitHub Copilot can help write code, find bugs and explain
+        complicated problems.
+    </p>
+
+    <br>
+
+    <p>
+        This makes programming easier and faster, but it also raises
+        an important question: will companies still need human programmers?
+    </p>
+</section>
+
+<section class="slide">
+    <h2>Why AI could replace programmers</h2>
+
+    <div class="content">
+        <div>
+            <div class="item">
+                <div class="number">01</div>
+                <h3>Speed</h3>
+                <p>AI can write simple code much faster than a human.</p>
+            </div>
+
+            <div class="item">
+                <div class="number">02</div>
+                <h3>Lower costs</h3>
+                <p>Companies could save money by using AI for basic programming tasks.</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="item">
+                <div class="number">03</div>
+                <h3>Availability</h3>
+                <p>AI tools are available at any time and do not need breaks.</p>
+            </div>
+
+            <div class="item">
+                <div class="number">04</div>
+                <h3>Simple applications</h3>
+                <p>People can now create basic websites and programs without knowing much code.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Why programmers are still needed</h2>
+
+    <div class="content">
+        <div>
+            <div class="item">
+                <div class="number">01</div>
+                <h3>AI makes mistakes</h3>
+                <p>Generated code is not always correct and can contain security problems.</p>
+            </div>
+
+            <div class="item">
+                <div class="number">02</div>
+                <h3>Understanding problems</h3>
+                <p>AI does not always understand what a client really needs.</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="item">
+                <div class="number">03</div>
+                <h3>Complex projects</h3>
+                <p>Large systems require planning, experience and many important decisions.</p>
+            </div>
+
+            <div class="item">
+                <div class="number">04</div>
+                <h3>Responsibility</h3>
+                <p>Someone has to check the final result and take responsibility for it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>AI vs Human Programmers</h2>
+
+    <div class="content">
+        <div>
+            <h3>AI is good at:</h3>
+            <div class="item"><p>Writing repetitive code</p></div>
+            <div class="item"><p>Finding common errors</p></div>
+            <div class="item"><p>Explaining code</p></div>
+            <div class="item"><p>Working quickly</p></div>
+        </div>
+
+        <div>
+            <h3>Humans are good at:</h3>
+            <div class="item"><p>Creative problem-solving</p></div>
+            <div class="item"><p>Making important decisions</p></div>
+            <div class="item"><p>Understanding people</p></div>
+            <div class="item"><p>Managing complex projects</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Our opinion</h2>
+
+    <p>
+        We don't think AI will completely replace programmers.
+        However, we believe that the job will change a lot in the future.
+    </p>
+
+    <br>
+
+    <p>
+        Programmers will probably spend less time writing simple code
+        and more time checking AI's work, planning projects and solving
+        difficult problems.
+    </p>
+
+    <div class="quote">
+        <p>
+            In our opinion, AI is a tool for programmers, not a replacement
+            for all of them.
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>So, can AI replace programmers?</h2>
+
+    <p>
+        AI can already do many things that programmers used to do
+        themselves. It will probably become even better in the future.
+    </p>
+
+    <br>
+
+    <p>
+        But programming is not only about writing code. It is also about
+        ideas, decisions, experience and understanding problems.
+    </p>
+
+    <div class="quote">
+        <p>
+            <span class="accent">AI will change programming,</span>
+            but human programmers are not going away anytime soon.
+        </p>
+    </div>
+
+    <div class="author">
+        Thank you for listening.
+    </div>
+</section>
+
+<div class="footer">
+    <button id="prev" onclick="changeSlide(-1)">←</button>
+    <button id="next" onclick="changeSlide(1)">→</button>
+
+    <div class="progress">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <div class="counter" id="counter">1 / 7</div>
+</div>
+
+<script>
+const slides = document.querySelectorAll(".slide");
+const progress = document.getElementById("progress");
+const counter = document.getElementById("counter");
+
+let current = 0;
+
+function showSlide(index) {
+    current = Math.max(0, Math.min(index, slides.length - 1));
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === current);
+    });
+
+    progress.style.width =
+        ((current + 1) / slides.length * 100) + "%";
+
+    counter.textContent =
+        (current + 1) + " / " + slides.length;
+
+    document.getElementById("prev").disabled = current === 0;
+    document.getElementById("next").disabled =
+        current === slides.length - 1;
+}
+
+function changeSlide(direction) {
+    showSlide(current + direction);
+}
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowRight" || e.key === " ") {
+        changeSlide(1);
+    }
+
+    if (e.key === "ArrowLeft") {
+        changeSlide(-1);
+    }
+
+    if (e.key === "Home") showSlide(0);
+    if (e.key === "End") showSlide(slides.length - 1);
+
+    if (e.key.toLowerCase() === "f") {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+    }
+});
+
+showSlide(0);
+</script>
+
+</body>
+</html>
